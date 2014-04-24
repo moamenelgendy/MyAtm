@@ -1,0 +1,34 @@
+<h1>Listing atms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bank</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @atms.each do |atm| %>
+      <tr>
+        <td><%= Bank.find_by(id: (atm.bank).to_i ).name %></td>
+		
+        <td><%= atm.longitude %></td>
+        <td><%= atm.latitude %></td>
+        <td><%= atm.address %></td>
+        <td><%= link_to 'Show', atm %></td>
+        <td><%= link_to 'Edit', edit_atm_path(atm) %></td>
+        <td><%= link_to 'Destroy', atm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Atm', new_atm_path %>

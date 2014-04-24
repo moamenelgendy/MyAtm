@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bank: MyString
+  longitude: MyString
+  latitude: MyString
+  address: MyString
+
+two:
+  bank: MyString
+  longitude: MyString
+  latitude: MyString
+  address: MyString

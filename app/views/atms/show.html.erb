@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= Bank.find_by(id: (@atm.bank).to_i ).name %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @atm.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @atm.latitude %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @atm.address %>
+</p>
+
+<%= link_to 'Edit', edit_atm_path(@atm) %> |
+<%= link_to 'Back', atms_path %>
