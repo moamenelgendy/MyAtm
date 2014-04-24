@@ -10,7 +10,7 @@ def getbanks()
   end 
   
   def getatm()
-	selectAtm(Integer(params[:bankid]))
+	selectAtm((params[:bankid]).to_i)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @query}
