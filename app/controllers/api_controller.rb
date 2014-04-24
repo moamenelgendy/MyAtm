@@ -17,7 +17,7 @@ def getbanks()
     end
   end 
   
-  def selectAtm( bankid =1)
-		@query = Atm.where("bank = \"#{bankid}\"") 
+  def selectAtm( bankid ="1")
+		@query = Atm.where("bank = "2"") 
   end
 end
