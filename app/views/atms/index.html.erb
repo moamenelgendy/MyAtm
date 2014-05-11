@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Bank</th>
+	  <th>City</th>
       <th>Longitude</th>
       <th>Latitude</th>
       <th>Address</th>
@@ -17,7 +18,7 @@
     <% @atms.each do |atm| %>
       <tr>
         <td><%= Bank.find_by(id: (atm.bank).to_i ).name %></td>
-		
+		<td><%= atm.city %></td>
         <td><%= atm.longitude %></td>
         <td><%= atm.latitude %></td>
         <td><%= atm.address %></td>

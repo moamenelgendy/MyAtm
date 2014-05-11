@@ -4,7 +4,10 @@
   <strong>Bank:</strong>
   <%= Bank.find_by(id: (@atm.bank).to_i ).name %>
 </p>
-
+<p>
+  <strong>City:</strong>
+  <%= @atm.city %>
+</p>
 <p>
   <strong>Longitude:</strong>
   <%= @atm.longitude %>

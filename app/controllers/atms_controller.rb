@@ -69,6 +69,6 @@ class AtmsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def atm_params
-      params.require(:atm).permit(:bank, :longitude, :latitude, :address)
+      params.require(:atm).permit(:bank,:city , :longitude, :latitude, :address)
     end
 end

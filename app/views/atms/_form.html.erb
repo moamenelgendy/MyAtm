@@ -15,6 +15,10 @@
     <%= f.label :bank %><br>
     <%=  f.collection_select(:bank, Bank.all, :id, :name) %><br>
   </div>
+   <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
   <div class="field">
     <%= f.label :longitude %><br>
     <%= f.text_field :longitude %>
@@ -27,6 +31,7 @@
     <%= f.label :address %><br>
     <%= f.text_field :address %>
   </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
